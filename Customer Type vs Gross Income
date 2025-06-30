@@ -1,0 +1,5 @@
+fig = px.bar(filtered_df.groupby("Customer type")["gross income"].mean().reset_index(),
+             x="Customer type", y="gross income",
+             title="Avg Gross Income per Customer Type", color="Customer type")
+st.plotly_chart(fig, use_container_width=True)
+st.info("🧠 Members tend to generate higher revenue per transaction—indicating loyalty value.")
