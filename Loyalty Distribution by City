@@ -1,0 +1,4 @@
+fig = px.histogram(filtered_df, x="City", color="Customer type", barmode="group",
+                   title="Loyalty (Customer Type) Distribution by City")
+st.plotly_chart(fig, use_container_width=True)
+st.markdown("➡️ Compare member vs normal customers across cities to guide city-specific loyalty programs.")
